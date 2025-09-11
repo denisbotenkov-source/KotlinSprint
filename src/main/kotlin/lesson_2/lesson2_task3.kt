@@ -1,6 +1,6 @@
 package org.exampleter.lesson_2
 
-fun main(){
+fun main() {
     val year = 1961
     var hour = "09"
     var minute = "07"
