@@ -1,7 +1,7 @@
 package org.exampleter
 
 fun main() {
-    val numberOfOrders: Int = 100
+    val numberOfOrders: Int = 75
     val thanksForThePurchase: String = "Благодарим за покупку!"
     var numberOfEmployees = 2000
     // println(numberOfEmployees)
@@ -10,6 +10,6 @@ fun main() {
 
     println(numberOfOrders)
     println(thanksForThePurchase)
-    println(numberOfEmployees)
+
 }
 
