@@ -8,7 +8,14 @@ fun main() {
     val partOfYear: Double = 2.0547945205479453E-4
     val apogee: Int = 327000
     println(
-        "length = $length," + "age = $age," + "partOfDay = $partOfDay," + "seconds = $seconds," + "partOfYear = $partOfYear," + "apogee = $apogee"
+        """
+        length = $length
+        age = $age
+        partOfDay = $partOfDay
+        seconds = $seconds
+        partOfYear = $partOfYear
+        apogee = $apogee
+    """.trimIndent()
     )
 }
 
