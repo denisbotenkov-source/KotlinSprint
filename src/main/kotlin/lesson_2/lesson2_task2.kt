@@ -12,4 +12,5 @@ fun main() {
     println("Расходы на выплату зарплаты постоянным сотрудникам:${expensesForPermanentEmployees}")
     println("Общие расходы по зарплатам после прихода стажёров:${totalSalaryExpenses}")
     println("Средняя зарплата одного сотрудника:${theAverageSalaryOfOneEmployee}")
+
 }
