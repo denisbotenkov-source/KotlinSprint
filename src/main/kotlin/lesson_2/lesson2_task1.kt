@@ -1,6 +1,7 @@
 package org.exampleter.lesson_2
 
-fun main(){
-    val numberOfOrders :Int = 100
-    val thanksForThePurchase: String = "Благодарим за покупку!"
+fun main() {
+    val points = arrayOf(3, 4, 3, 5)
+    val arithmeticMean = points.average()
+    println(arithmeticMean)
 }
