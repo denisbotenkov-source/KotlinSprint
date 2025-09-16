@@ -15,6 +15,7 @@ fun main() {
         println("You guessed wrong!")
     }
     println("Winning numbers were: $NUMBER_FIRST and $NUMBER_SECOND")
+
 }
 
 const val NUMBER_FIRST = 19
