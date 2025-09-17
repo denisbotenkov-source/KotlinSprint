@@ -1,8 +1,6 @@
 package org.exampleter.lesson_4
 
 fun main() {
-    val availabilityOfSunnyWeather = true
-    val outdoorAwning = true
     val theAirHumidityIs = 20
     val timeOfTheYear = "Не Зима"
     val airHumidity = 20
@@ -10,8 +8,11 @@ fun main() {
     println(
         "Благоприятные ли условия сейчас для роста бобовых?" +
                 "${
-                    availabilityOfSunnyWeather && outdoorAwning && theAirHumidityIs ==
+                    AVAILAB_ILITYOf_SUNNY_WEATHER && OUTDOOR_AWNING && theAirHumidityIs ==
                             airHumidity && timeOfTheYear == currentTimeOfTheYear
                 }"
     )
 }
+
+const val AVAILAB_ILITYOf_SUNNY_WEATHER = true
+const val OUTDOOR_AWNING = true
