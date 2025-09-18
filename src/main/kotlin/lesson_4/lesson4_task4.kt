@@ -5,19 +5,20 @@ fun main() {
     var legs = false
     var back = false
     var press = true
-    for (day in 1..31) {
-        println(
-            """
+    val correctDay = 2
+   val isdayEven = correctDay % 2 == 0
+   if (isdayEven){
+       println(
+           """
             Exercises for the hands:$hands" 
             Leg exercises:$legs 
             Exercise for the back:$back 
             Exercises for the press:$press
-            Day${day}
-             
              """.trimMargin())
-        hands = !hands
-        legs = !legs
-        back = !back
-        press = !press
-    }
-}
+   }else{
+       hands = !hands
+       legs = !legs
+       back = !back
+       press = !press
+   }
+       }
