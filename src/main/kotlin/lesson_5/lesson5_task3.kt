@@ -1,5 +1,7 @@
 package org.exampleter.lesson_5
 
+const val NUMBER_FIRST = 19
+const val NUMBER_SECOND = 27
 fun main() {
     println("Enter two numbers:")
     val userFirst = readln().toIntOrNull()
@@ -17,6 +19,3 @@ fun main() {
     println("Winning numbers were: $NUMBER_FIRST and $NUMBER_SECOND")
 
 }
-
-const val NUMBER_FIRST = 19
-const val NUMBER_SECOND = 27
