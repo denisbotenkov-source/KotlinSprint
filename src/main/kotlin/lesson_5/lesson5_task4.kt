@@ -1,5 +1,7 @@
 package org.exampleter.lesson_5
 
+const val REGISTERED_USER = "Zaphod"
+const val REGISTERED_PASSWORD = "PanGalactic"
 fun main() {
     val userZaphod = "Zaphod"
     val passvord = "PanGalactic"
@@ -12,5 +14,3 @@ fun main() {
     }
 }
 
-const val REGISTERED_USER = "Zaphod"
-const val REGISTERED_PASSWORD = "PanGalactic"
