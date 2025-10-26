@@ -1,10 +1,10 @@
 package org.exampleter.lesson_5
 
-import kotlin.random.Random
-
 fun main() {
     val size = 3
-    val randomList: List<Int> = List(size) { Random.nextInt(0, 42) }
+    val randomList: List<Int> = List(size) {
+        (1..42).random()
+    }
     println("Enter $size numbers separated by a space.")
     val userList: List<Int> = readln()
         .split(' ')
