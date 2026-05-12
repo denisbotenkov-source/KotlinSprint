@@ -6,5 +6,7 @@ fun main() {
     val from = result[0]
     val to = result[1]
     val strokeNumber = result[2]
-    println("Откуда:$from , куда $to , номер хода:$strokeNumber")
+    println("Откуда:$from.")
+    println("куда $to .")
+    println("Номер хода:$strokeNumber.")
 }
