@@ -1,6 +1,6 @@
 package org.exampleter.kotlinSprintLesson_4
 
-fun main() {
+fun main(){
     val isAvailabilityOfSunnyWeather: Boolean = true
     val isOutdoorAwning: Boolean = true
 
