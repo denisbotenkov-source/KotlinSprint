@@ -1,13 +1,24 @@
 package org.exampleter.kotlinSprintLesson_4
 
+const val AVERAGE_MIN_KG = 35
+const val AVERAGE_MAX_KG = 100
+const val AVERAGE_MAX_LITER = 100
+
 fun main() {
-    val averageMinKg = 35
-    val averageMaxKg = 100
-    val averageMaxLiter = 100
     val cargoKg = 20
     val cargoLiter = 80
-    val cargoKgTwo = 50
-    val cargoLiterTwo = 100
-    println("Ãðóç ñ âåcîì $cargoKg êã è îáú¸ìîì $cargoLiter ëèòðîâ ñîîòâåòñòâóåò êàòåãîðèè Average.${cargoKg > averageMinKg && cargoKg <= averageMaxKg && cargoLiter < averageMaxLiter} ")
-    println("Ãðóç ñ âåcîì $cargoKgTwo êã è îáú¸ìîì $cargoLiterTwo ëèòðîâ ñîîòâåòñòâóåò êàòåãîðèè Average.${cargoKgTwo > averageMinKg && cargoKgTwo <= averageMaxKg && cargoLiterTwo < averageMaxLiter}")
+    val cargoWeight = 50
+    val cargoVolume = 100
+    println(
+        "Ð“Ñ€ÑƒÐ· Ñ Ð²ÐµÑÐ¾Ð¼ $cargoKg ÐºÐ³ Ð¸ Ð¾Ð±ÑŠÐµÐ¼Ð¾Ð¼ $cargoLiter " +
+                "ÑÐ¾Ð¾Ñ‚Ð²ÐµÑ‚ÑÑ‚Ð²ÑƒÐµÑ‚ ÐºÐ°Ñ‚ÐµÐ³Ð¾Ñ€Ð¸Ð¸ 'Average':" +
+                "${cargoKg > AVERAGE_MIN_KG && cargoKg <= AVERAGE_MAX_KG && cargoLiter < AVERAGE_MAX_LITER}"
+    )
+    println(
+        "Ð“Ñ€ÑƒÐ· Ñ Ð²ÐµÑÐ¾Ð¼ $cargoWeight ÐºÐ³ Ð¸ Ð¾Ð±ÑŠÐµÐ¼Ð¾Ð¼ $cargoVolume " +
+                "ÑÐ¾Ð¾Ñ‚Ð²ÐµÑ‚ÑÑ‚Ð²ÑƒÐµÑ‚ ÐºÐ°Ñ‚ÐµÐ³Ð¾Ñ€Ð¸Ð¸ 'Average':" +
+                "${cargoWeight > AVERAGE_MIN_KG && cargoWeight <= AVERAGE_MAX_KG && cargoVolume < AVERAGE_MAX_LITER}"
+    )
+
 }
+
