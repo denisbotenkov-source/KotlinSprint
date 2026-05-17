@@ -2,11 +2,11 @@ package org.exampleter.kotlinSprintLesson_5
 
 fun main() {
     println("Введите первое число")
-    val userFirst = readln().toIntOrNull()
+    val userFirst = readln().toInt()
     println("Введите второе число")
-    val userSecond = readln().toIntOrNull()
-    val firstNumberWin = 5
-    val secondNumberWin = 19
+    val userSecond = readln().toInt()
+    val firstNumberWin = ((0..42).random())
+    val secondNumberWin = ((0..42).random())
     val firstCorrect = (userFirst == firstNumberWin && userSecond == secondNumberWin) ||
             (userFirst == secondNumberWin && userSecond == firstNumberWin)
     val secondCorrect = ((userFirst == firstNumberWin || userFirst == secondNumberWin) &&
@@ -14,9 +14,9 @@ fun main() {
             !firstCorrect
 
     when {
-        firstCorrect -> println("Поздравляем! Вы выиграли главный приз!")
-        secondCorrect -> println("Вы выиграли утешительный приз.")
-        else -> println("Неудача!")
+        firstCorrect -> println("Поздравляем! Вы выиграли главный приз!Победные числа $firstNumberWin и $secondNumberWin")
+        secondCorrect -> println("Вы выиграли утешительный приз.Победные числа $firstNumberWin и $secondNumberWin")
+        else -> println("Неудача!Победные числа $firstNumberWin и $secondNumberWin")
     }
 }
 
