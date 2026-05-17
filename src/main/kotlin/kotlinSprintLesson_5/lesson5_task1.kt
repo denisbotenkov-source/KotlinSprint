@@ -1,8 +1,11 @@
 package org.exampleter.kotlinSprintLesson_5
 
 fun main() {
-    println("Для авторизации решите пример.10 + 5")
+    val numFirst = ((0..10).random())
+    val numSecond = ((0..10).random())
+    println("Для авторизации решите пример. $numFirst + $numSecond")
+    val result = numFirst + numSecond
     val answer = readln().toIntOrNull()
-    if (answer == 15) println("Добро пожаловать!")
+    if (answer == result) println("Добро пожаловать!")
     else println("Доступ запрещён.")
 }
