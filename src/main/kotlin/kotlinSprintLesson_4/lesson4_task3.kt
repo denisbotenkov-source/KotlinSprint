@@ -1,15 +1,15 @@
-package org.exampleter.kotlinSprintLesson_4
+package org.example.kotlinSprintLesson_4
 
 const val FAVORABLE_HUMIDITY = 20
-const val REQUAIRED_SESON = "Не зима"
+const val REQUIRED_SEASON = "Зима"
+
 fun main() {
-    val isAvailabilityOfSunnyWeather: Boolean = true
+    val isSunny: Boolean = true
     val isOutdoorAwning: Boolean = true
     val airHumidity = 20
-    val seasonNow = "Зима"
+    val seasonNow = "Не зима"
 
     val checkingConditions: Boolean =
-        isAvailabilityOfSunnyWeather && isOutdoorAwning && FAVORABLE_HUMIDITY == airHumidity && REQUAIRED_SESON == seasonNow
-    println("Благоприятные ли условия сейчас для роста бобовых?${checkingConditions}")
+        isSunny && isOutdoorAwning && FAVORABLE_HUMIDITY == airHumidity && REQUIRED_SEASON != seasonNow
+    println("Благоприятные ли условия сейчас для роста бобовых? ${checkingConditions}")
 }
-
