@@ -1,6 +1,6 @@
 package org.exampleter.kotlinSprintLesson_5
 
-fun main() {
+fun main() {  
     val numFirst = (0..10).random()
     val numSecond = (0..10).random()
     println("Для авторизации решите пример. $numFirst + $numSecond")
