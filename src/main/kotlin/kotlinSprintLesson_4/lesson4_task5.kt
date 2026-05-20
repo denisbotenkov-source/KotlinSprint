@@ -12,9 +12,9 @@ fun main() {
     println("Количество ящиков на борту?")
     val numberOfBoxes = readln()?.toInt() ?: 0
     println("Благоприятна ли погода?")
-    val isFavorableWeatherConditions: Boolean = readln()?.toBoolean() ?: true
+    val isFavorableWeatherConditions: Boolean = readln().toBoolean()
     val isReadyToSail = (!isShipDamage && currentSquad in CREW_MIN..CREW_MAX && numberOfBoxes > PROVISION_MIN) ||
-            (isShipDamage && currentSquad == 70 && numberOfBoxes >= 50 && isFavorableWeatherConditions)
+            (isShipDamage && currentSquad == CREW_MAX  && numberOfBoxes >= PROVISION_MIN  && isFavorableWeatherConditions)
     println("Корабль готов к отплытию. $isReadyToSail")
 
 }
