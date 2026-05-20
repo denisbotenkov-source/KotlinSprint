@@ -7,7 +7,7 @@ fun main() {
     val isSunny: Boolean = true
     val isOutdoorAwning: Boolean = true
     val airHumidity = 20
-    val seasonNow = "Не зима"
+    val seasonNow = "Зима"
 
     val checkingConditions: Boolean =
         isSunny && isOutdoorAwning && FAVORABLE_HUMIDITY == airHumidity && REQUIRED_SEASON != seasonNow
