@@ -1,16 +1,15 @@
 package org.exampleter.kotlinSprintLesson_6
 
 fun main() {
-    println("Пройдите регистрацию.")
-    var login = readln()
-    var password = readln()
-    lateinit var userLogin: String
-    lateinit var userPassword: String
+    println("Придумайте логин.")
+    val login = readln()
+    println("Придумайте пароль.")
+    val password = readln()
     do {
         println("Введите логин")
-        userLogin = readln()
+        val userLogin = readln()
         println("Введите пароль:")
-        userPassword = readln()
-    } while (userPassword != password && userLogin != login)
+        val userPassword = readln()
+    } while (userPassword != password || userLogin != login)
     println("Авторизация прошла успешно.")
 }
