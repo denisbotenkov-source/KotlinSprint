@@ -1,17 +1,17 @@
-package org.exampleter.kotlinSprintLesson_7
-
-import kotlin.random.Random
+package kotlinSprintLesson_7
 
 fun main() {
+    var code: Int
+    var user: Int?
     do {
-        val code = Random.nextInt(1000, 10000)
+        code = (1000..9999).random()
         println("Ваш код авторизации: $code.")
-        val user = readln().toIntOrNull()
-        if (user != code) {
-            println("Неверный код,скоро прийдёт новый.")
-            continue
-        } else {
-            println("Добро пожаловать!")
+        user = readln().toIntOrNull()
+        if (user != null) {
+            if (user != code) {
+                println("Неверный код, скоро прийдёт новый.")
+            }
         }
-    } while (user != code)
+    } while (user == null || user != code)
+    println("Добро пожаловать!")
 }
