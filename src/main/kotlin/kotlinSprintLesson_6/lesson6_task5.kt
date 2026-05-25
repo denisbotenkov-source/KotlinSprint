@@ -7,7 +7,7 @@ fun main() {
         val numSecond = (1..9).random()
         val example = numFirst + numSecond
         println(
-            "Докажите что вы не бот, решите пример: $numFirst + $numSecond" +
+            "Докажите что вы не бот, решите пример: $numFirst + $numSecond " +
                     "Осталось попыток $attempts."
         )
         val user = readln().toIntOrNull()
@@ -16,11 +16,11 @@ fun main() {
             break
         } else {
             attempts--
-            println("Неверно.Осталось попыток $attempts")
+            println("Неверно. Осталось попыток $attempts")
+
         }
-        if (attempts == 0) {
-            println("Доступ запрещен.")
-            break
-        }
+    }
+    if (attempts == 0) {
+        println("Доступ запрещен.")
     }
 }
