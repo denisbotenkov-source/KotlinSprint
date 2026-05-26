@@ -7,10 +7,8 @@ fun main() {
         code = (1000..9999).random()
         println("Ваш код авторизации: $code.")
         user = readln().toIntOrNull()
-        if (user != null) {
-            if (user != code) {
-                println("Неверный код, скоро прийдёт новый.")
-            }
+        if (user != null && user != code) {
+            println("Неверный код, скоро прийдёт новый.")
         }
     } while (user == null || user != code)
     println("Добро пожаловать!")
