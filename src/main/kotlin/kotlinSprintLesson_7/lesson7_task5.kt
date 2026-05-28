@@ -3,8 +3,8 @@ package kotlinSprintLesson_7
 const val MIN_CHARACTERS = 6
 fun main() {
     val digits = '0'..'9'
-    val lowercase = "abcdefghijklmnopqrstuvwxyz"
-    val uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    val lowercase = 'a'..'z'
+    val uppercase = 'A'..'Z'
     var password = ""
     println("Введите длину пароля.")
     val userPassword = readln().toIntOrNull()
