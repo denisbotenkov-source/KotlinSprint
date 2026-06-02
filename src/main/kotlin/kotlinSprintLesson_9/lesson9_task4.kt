@@ -1,8 +1,7 @@
-package org.exampleter.kotlinSprintLesson_9
+package kotlinSprintLesson_9
 
 fun main() {
     println("Введите 5 ингредиентов.")
-    val user = readln()
-    val userIngredients = user.split(", ")
-    println("${userIngredients.sorted()}")
+    val user = readln().split(", ")
+    println(user.sorted())
 }
