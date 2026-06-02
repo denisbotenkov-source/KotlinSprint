@@ -5,17 +5,21 @@ fun main() {
     val digits = '0'..'9'
     val lowercase = 'a'..'z'
     val uppercase = 'A'..'Z'
-    var password = ""
     val allChars = digits + lowercase + uppercase
+    var password = ""
+
     println("Введите длину пароля.")
     val userPassword = readln().toIntOrNull()
     if (userPassword != null && userPassword >= MIN_CHARACTERS) {
-        for (i in 0 until userPassword) {
+        password += digits.random()
+        password += lowercase.random()
+        password += uppercase.random()
+        for (i in 3 until userPassword) {
             password += allChars.random()
+            password = password.toList().shuffled().joinToString("")
+            println(password)
         }
-        password = password.toList().shuffled().joinToString("")
     } else {
         println("Минимальная длина пароля $MIN_CHARACTERS.")
     }
-    println(password)
 }
