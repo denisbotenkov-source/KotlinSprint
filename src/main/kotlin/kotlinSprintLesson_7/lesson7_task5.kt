@@ -16,10 +16,10 @@ fun main() {
         password += uppercase.random()
         for (i in 3 until userPassword) {
             password += allChars.random()
-            password = password.toList().shuffled().joinToString("")
-            println(password)
         }
     } else {
         println("Минимальная длина пароля $MIN_CHARACTERS.")
     }
+    password = password.toList().shuffled().joinToString("")
+    println(password)
 }
