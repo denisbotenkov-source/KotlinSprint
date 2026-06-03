@@ -8,8 +8,8 @@ fun main() {
 
     if (userAnswer.equals("да", ignoreCase = true)) {
         println("Какой ингредиент вы хотите добавить?")
+        val newIngredient = readln()
+        ingredients.add(newIngredient)
+        println("Теперь в рецепте есть следующие ингредиенты: ${ingredients}")
     } else return
-    val newIngredient = readln()
-    ingredients.add(newIngredient)
-    println("Теперь в рецепте есть следующие ингредиенты: ${ingredients}")
 }
