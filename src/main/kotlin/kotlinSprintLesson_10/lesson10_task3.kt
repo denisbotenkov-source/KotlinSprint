@@ -11,13 +11,14 @@ fun generatePassword(passwordLength: Int?): String {
     val numbers = 0..9
     val symbols = ' '..'/'
     var password = ""
-    if (passwordLength != null)
+    if (passwordLength != null) {
         for (i in 0 until passwordLength) {
             if (i % 2 == 1) {
-                password += symbols.random().toString()
+                password += symbols.random()
             } else {
                 password += numbers.random()
             }
         }
+    }
     return password
 }
