@@ -1,26 +1,28 @@
 package org.example.kotlinSprintLesson_10
 
 fun main() {
-    var user: String
+    var user = ""
     var round = 1
     var userWins = 0
 
     do {
         println("Раунд: $round.")
-        if (rounds()) {
+        if (playRound()) {
             userWins++
         }
         println("Хотите бросить кости еще раз? Введите Да или Нет.")
         user = readln()
-        if (user == "Нет") {
-            println("Количество выйгранных партий: $userWins")
+        if (user.equals("Нет", ignoreCase = true)) {
+            break
         } else {
             round++
         }
     } while (user != "Нет")
+    println("Количество выйгранных партий: $userWins")
+
 }
 
-fun rounds(): Boolean {
+fun playRound(): Boolean {
     val human = rollDie()
     val bot = rollDie()
     println("Компьютер и человек по очереди бросают кости. Человек: $human. Компьютер: $bot")
@@ -38,7 +40,7 @@ fun rounds(): Boolean {
 
 }
 
-fun rollDie(sides: Int = 6, count: Int = 1): Int {
-    return (1..sides).random()
+fun rollDie(sides: Int = 6): Int = (1..sides).random()
 
-}
+
+
