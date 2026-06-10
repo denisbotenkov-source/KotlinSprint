@@ -19,6 +19,7 @@ fun main() {
         }
     } while (user != "Нет")
     println("Количество выйгранных партий: $userWins")
+
 }
 
 fun playRound(): Boolean {
