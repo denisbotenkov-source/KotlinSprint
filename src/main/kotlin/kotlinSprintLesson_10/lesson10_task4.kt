@@ -1,4 +1,4 @@
-package org.example.kotlinSprintLesson_10
+package kotlinSprintLesson_10
 
 fun main() {
     var user = ""
