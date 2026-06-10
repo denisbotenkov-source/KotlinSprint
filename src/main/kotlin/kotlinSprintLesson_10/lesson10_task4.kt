@@ -36,7 +36,6 @@ fun playRound(): Boolean {
         println("Ничья.")
         return false
     }
-
 }
 
 fun rollDie(sides: Int = 6): Int = (1..sides).random()
