@@ -5,20 +5,19 @@ fun main() {
 }
 
 class Category(
-    val nazvanie: String,
-    val opisanie: String,
+    val name: String,
+    val description: String,
+)
 
-    )
-
-class Recept(
-    val tekstRecept: String,
-    val nazvanieBluda: String,
-    val ingredients: MutableList<Ingredient>,
-    val category: Category,
+class Recipe(
+    val text: String,
+    val title: String,
+    val ingredients: List<Ingredient>,
+    val Id: Int,
 )
 
 class Ingredient(
-    val nazvanie: String,
-    val edinicaIzmereniya: String,
-    val kolichestvo: Double,
+    val name: String,
+    val unit: String,
+    val quantity: Double,
 )
