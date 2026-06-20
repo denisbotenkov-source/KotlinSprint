@@ -30,6 +30,7 @@ class Room(
         for (p in participants) {
             if (p.nickname == nickname) {
                 p.status = status
+                break
             }
         }
     }
