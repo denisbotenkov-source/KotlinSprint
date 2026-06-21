@@ -13,6 +13,7 @@ fun main() {
     daySecondWeather.print()
 }
 
+
 class OneDayWeather() {
     var dayTemperature: Int = 0
     var nightTemperature: Int = 0
