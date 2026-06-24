@@ -1,12 +1,14 @@
 package org.exampleter.kotlinSprintLesson_12
 
+const val CELSIUM_ED = 273
 fun main() {
-    val sensor = Sensor(36.6)
+    val converter = Converter(300)
+
 }
 
-class Sensor(val temp: Double) {
+class Converter(kelvin: Int) {
     init {
-        require(temp >= -273.15) { "Температура $temp ниже абсолютного нуля" }
-        println("$temp")
+        val celsius = kelvin - CELSIUM_ED
+        println(celsius)
     }
 }
