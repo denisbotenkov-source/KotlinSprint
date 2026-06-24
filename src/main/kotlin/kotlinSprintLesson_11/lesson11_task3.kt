@@ -27,12 +27,7 @@ class Room(
     }
 
     fun updateStatus(nickname: String, status: Status) {
-        for (p in participants) {
-            if (p.nickname == nickname) {
-                p.status = status
-                break
-            }
-        }
+        participants.find { it.nickname == nickname }?.let { it.status = status }
     }
 }
 
