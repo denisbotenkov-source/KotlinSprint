@@ -12,14 +12,14 @@ fun main() {
 }
 
 class Forum(
-    val members: MutableList<ForumMember>,
-    val messages: MutableList<ForumMessage>,
+    private val members: MutableList<ForumMember>,
+    private val messages: MutableList<ForumMessage>,
 ) {
-
+    private var nextId = 1
     fun createNewUser(userName: String): ForumMember {
-        val newId = members.size + 1
-        val newMember = ForumMember(newId, userName)
+        val newMember = ForumMember(nextId, userName)
         members.add(newMember)
+        nextId++
         return newMember
     }
 
@@ -42,8 +42,8 @@ class Forum(
     }
 
     class ForumMember(
-        var userId: Int,
-        var userName: String,
+        val userId: Int,
+        val userName: String,
     )
 
     class ForumMessage(
