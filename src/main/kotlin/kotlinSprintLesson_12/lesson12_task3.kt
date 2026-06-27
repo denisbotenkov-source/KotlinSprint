@@ -3,16 +3,16 @@ package org.exampleter.kotlinSprintLesson_12
 const val CELSIUM_ED = 273
 
 fun main() {
-    val converter = Converter(300)
+    val converter = WeatherV2(300, 310, 320)
     converter.print()
 }
 
-class Converter(kelvin: Int) {
+class WeatherV2(kelvin: Int, var dayTemperature: Int, var nightTemperature: Int) {
     val celsius = kelvin - CELSIUM_ED
+    val dayTemp = dayTemperature - CELSIUM_ED
+    val nightTemp = nightTemperature - CELSIUM_ED
 
     fun print() {
-        println("$celsius")
+        println("$celsius, $dayTemp, $nightTemp")
     }
 }
-
-//Я не понимаю для чего тут копировать класс с предыдущего урока, если там был вывод температуры в консоль. а здесь просто перевод из кельвинов в цельсии((
