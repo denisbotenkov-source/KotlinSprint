@@ -11,8 +11,7 @@ fun main() {
         val weather = MonthlyWeather(nightTemp, dayTemp, hasRain)
         monthlyWeather.add(weather)
     }
-    val avgNight = averageNightTemp(monthlyWeather)
-    val avgDay = calculateAverageDayTemp(monthlyWeather)
+    val (avgNight, avgDay) = calculateTemp(monthlyWeather)
     val daysWithRain = countRainyDays(monthlyWeather)
 
     println("Средняя ночная температура: $avgNight")
@@ -20,16 +19,14 @@ fun main() {
     println("Дней с осадками: $daysWithRain")
 }
 
-class MonthlyWeather(val temperaturaNochiu: Double, val temperaturaDnem: Double, val osadki: Boolean)
-
-fun averageNightTemp(month: List<MonthlyWeather>): Double {
-    return month.map { it.temperaturaNochiu }.average()
-}
+class MonthlyWeather(val nightTemperature: Double, val dayTemperature: Double, val hasRain: Boolean)
 
 fun countRainyDays(month: List<MonthlyWeather>): Int {
-    return month.count { it.osadki }
+    return month.count { it.hasRain }
 }
 
-fun calculateAverageDayTemp(month: List<MonthlyWeather>): Double {
-    return month.map { it.temperaturaDnem }.average()
+fun calculateTemp(month: List<MonthlyWeather>): Pair<Double, Double> {
+    val avgNight = month.map { it.nightTemperature }.average()
+    val avgDay = month.map { it.dayTemperature }.average()
+    return Pair(avgNight, avgDay)
 }
