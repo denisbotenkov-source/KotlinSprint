@@ -6,7 +6,7 @@ fun main() {
         println("Введите имя.")
         val userName = readln()
         println("Введите номер телефона.")
-        val userPhoneNumber = readln().toLongOrNull() ?: null
+        val userPhoneNumber = readln().toLongOrNull()
         if (userPhoneNumber == null) {
             println("Номер телефона не указан или введён некорректно. Контакт не добавлен.")
             continue
