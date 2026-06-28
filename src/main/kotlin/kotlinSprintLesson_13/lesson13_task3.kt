@@ -8,7 +8,7 @@ fun main() {
         ContactNumber("Имя4", 89123456782, null),
         ContactNumber("Имя5", 89123456783, "ДругаяКомпания")
     )
-    println("${contacts.map { it.companyName ?: "Какая то компания" }}")
+    println("${contacts.map { it.companyName }}")
 }
 
 class ContactNumber(
