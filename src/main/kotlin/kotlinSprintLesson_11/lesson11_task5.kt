@@ -1,7 +1,7 @@
 package org.example.kotlinSprintLesson_11
 
 fun main() {
-    val forum = Forum(mutableListOf(), mutableListOf())
+    val forum = Forum()
     forum.createNewUser("Анна")
     forum.createNewMessage(1, "Всем привет!")
     forum.createNewUser("Борис")
@@ -11,11 +11,12 @@ fun main() {
     forum.printThread()
 }
 
-class Forum(
-    private val members: MutableList<ForumMember>,
-    private val messages: MutableList<ForumMessage>,
-) {
+class Forum {
+    private val members: MutableList<ForumMember> = mutableListOf()
+    private val messages: MutableList<ForumMessage> = mutableListOf()
     private var nextId = 1
+
+
     fun createNewUser(userName: String): ForumMember {
         val newMember = ForumMember(nextId, userName)
         members.add(newMember)
