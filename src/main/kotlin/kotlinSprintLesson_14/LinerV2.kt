@@ -6,7 +6,7 @@ open class LinerV2(
     open val capacity: Int = 1000,
     open val loadingMethod: String = "Выдвигает горизонтальный трап со шкафута.",
 ) {
-    open fun printInfo(){
-        println(loadingMethod)
+    open fun printInfo() {
+        println("Скорость: $speed, грузоподъёмность: $loadCapacity, вместимость: $capacity, Метод погрузки: $loadingMethod")
     }
 }

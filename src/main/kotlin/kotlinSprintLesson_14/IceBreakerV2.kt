@@ -7,7 +7,7 @@ class IceBreakerV2(
     override val capacity: Int = 800,
     override val loadingMethod: String = "Открывает ворота со стороны кормы.",
 ) : LinerV2() {
-    override fun printInfo(){
+    override fun printInfo() {
         println(loadingMethod)
     }
 }
