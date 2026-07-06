@@ -1,7 +1,7 @@
 package org.exampleter.kotlinSprintLesson_15
 
 class WeatherServer {
-    fun SendingMessage(stats: WeatherStationStats) {
+    fun sendingMessage(stats: WeatherStationStats) {
         stats.show()
     }
 }
