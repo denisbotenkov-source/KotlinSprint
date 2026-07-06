@@ -5,6 +5,6 @@ interface PassengerTransportation {
     var currentPassengers: Int
     var totalPassengersTransported: Int
 
-    fun loadPassenger()
-    fun unloadPassenger()
+    fun loadPassenger(amount:Int)
+    fun unloadPassenger(amount:Int)
 }

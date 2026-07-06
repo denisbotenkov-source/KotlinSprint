@@ -12,24 +12,23 @@ class PassengerCar() : Movement, PassengerTransportation {
         flight++
     }
 
-    override fun loadPassenger() {
-
-        if (currentPassengers + 3 <= maxPassengers) {
-            currentPassengers += 3
+    override fun loadPassenger(amount: Int) {
+        if (currentPassengers + amount <= maxPassengers) {
+            currentPassengers += amount
             println("В авто загружено $currentPassengers пассажиров.")
         } else {
             println("Мест нет.")
         }
     }
 
-    override fun unloadPassenger() {
-        if (currentPassengers > 0) {
-            currentPassengers -= 3
+    override fun unloadPassenger(amount: Int) {
+        if (currentPassengers >= amount) {
+            currentPassengers -= amount
             println("Пассажиры выгрузились,осталось $currentPassengers.")
-            totalPassengersTransported += 3
+            totalPassengersTransported += amount
             println("Всего перевезено пассажиров: $totalPassengersTransported.")
         } else {
-            println("В машине никого нет.")
+            println("Нельзя выгрузить $amount, в машине только $currentPassengers.")
         }
     }
 }
