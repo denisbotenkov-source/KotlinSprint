@@ -1,6 +1,6 @@
 package org.exampleter.kotlinSprintLesson_16
 
-class Order(private val orderNumber: Int, var status: String) {
+class Order(private val orderNumber: Int, private var status: String) {
     fun sendRequest(newStatus: String) {
         updateStatus(newStatus)
     }
