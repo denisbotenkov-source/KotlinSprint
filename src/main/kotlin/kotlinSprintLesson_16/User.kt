@@ -1,5 +1,5 @@
 package org.exampleter.kotlinSprintLesson_16
 
-class User(val login: String, private val password: String = "abc123") {
+class User(private val login: String, private val password: String) {
     fun check(userPassword: String): Boolean = password == userPassword
 }
